@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codex Explicit Mode Skills</title>
+    <meta name="description" content="Opt-in Codex skills for planner coordination and subagent optimization councils.">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1f2933;
+        --muted: #52606d;
+        --line: #d9e2ec;
+        --panel: #f8fafc;
+        --accent: #0f766e;
+        --accent-dark: #115e59;
+        --bg: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.55;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      }
+
+      main,
+      .inner {
+        width: min(1080px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 72px 0 48px;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0;
+        font-size: clamp(2.2rem, 6vw, 4.8rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .lede {
+        max-width: 760px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 1.2rem;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        color: #ffffff;
+        background: var(--accent);
+        text-decoration: none;
+        font-weight: 650;
+      }
+
+      a.button.secondary {
+        color: var(--accent-dark);
+        background: #ffffff;
+      }
+
+      section {
+        padding: 44px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 18px;
+        font-size: 1.7rem;
+        letter-spacing: 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 22px;
+        background: var(--panel);
+      }
+
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+      }
+
+      .card p {
+        margin: 0 0 14px;
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+
+      pre {
+        overflow-x: auto;
+        padding: 16px;
+        border-radius: 8px;
+        background: #111827;
+        color: #e5e7eb;
+      }
+
+      footer {
+        padding: 28px 0 40px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 760px) {
+        main,
+        .inner {
+          width: min(100% - 28px, 1080px);
+        }
+
+        .hero {
+          padding: 48px 0 36px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="inner hero">
+        <h1>Codex Explicit Mode Skills</h1>
+        <p class="lede">Opt-in skills for heavier Codex workflows: one for planner coordination, one for real-subagent optimization councils.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/hideaway007/codex-explicit-mode-skills">View on GitHub</a>
+          <a class="button secondary" href="#install">Install</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Skills</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>planner-coordinator</h3>
+            <p>A main Planner mode for complex tasks that need context reading, option comparison, task splitting, selective subagent delegation, integration, and verification.</p>
+            <ul>
+              <li>Explicitly invoked Planner workflow.</li>
+              <li>Subagents only when useful.</li>
+              <li>Project gates remain the source of truth.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>optimization-council</h3>
+            <p>A council mode that must start real subagents for architecture, efficiency, user value, and Red Team review, then run 3-6 structured debate rounds.</p>
+            <ul>
+              <li>Requires real subagents.</li>
+              <li>Minimum 3 rounds, maximum 6 rounds.</li>
+              <li>Converges on executable priorities and verification metrics.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="install">
+        <h2>Install</h2>
+        <pre><code>mkdir -p ~/.codex/skills
+cp -R skills/planner-coordinator ~/.codex/skills/
+cp -R skills/optimization-council ~/.codex/skills/</code></pre>
+        <p>Restart Codex after copying the folders so the skill metadata is loaded.</p>
+      </section>
+
+      <section>
+        <h2>Invoke</h2>
+        <pre><code>Use planner-coordinator mode to plan this multi-module refactor before implementation.
+
+Use optimization-council mode to evaluate this product workflow. Run the minimum 3 council rounds.
+
+启动优化议会，针对这个论文工作流做多角色优化，必须启动 subagents。</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <div class="inner">MIT licensed. Built for explicit, proportional Codex workflows.</div>
+    </footer>
+  </body>
+</html>
