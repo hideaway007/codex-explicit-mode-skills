@@ -1,0 +1,6 @@
+interface:
+  display_name: "项目任务执行器"
+  short_description: "长时间项目主控与并行执行"
+  default_prompt: "Use $project-task-executor 规划、分派、并行运行 subagents、审查、验证并 commit 这个项目目标："
+policy:
+  allow_implicit_invocation: false

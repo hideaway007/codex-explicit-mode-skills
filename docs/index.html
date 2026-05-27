@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Codex Explicit Mode Skills</title>
-    <meta name="description" content="Opt-in Codex skills for planner coordination and subagent optimization councils.">
+    <meta name="description" content="Opt-in Codex skills for planner coordination, subagent optimization councils, and long-running project execution.">
     <style>
       :root {
         color-scheme: light;
@@ -161,7 +161,7 @@
     <header>
       <div class="inner hero">
         <h1>Codex Explicit Mode Skills</h1>
-        <p class="lede">Opt-in skills for heavier Codex workflows: one for planner coordination, one for real-subagent optimization councils.</p>
+        <p class="lede">Opt-in skills for heavier Codex workflows: planner coordination, real-subagent optimization councils, and long-running project execution with durable ledgers.</p>
         <div class="actions">
           <a class="button" href="https://github.com/hideaway007/codex-explicit-mode-skills">View on GitHub</a>
           <a class="button secondary" href="#install">Install</a>
@@ -192,6 +192,16 @@
               <li>Converges on executable priorities and verification metrics.</li>
             </ul>
           </article>
+
+          <article class="card">
+            <h3>project-task-executor</h3>
+            <p>A project controller mode for long-running goals that need AGENT ledgers, task waves, bounded subagents, integrated review, and verification before commit.</p>
+            <ul>
+              <li>Creates and validates AGENT_* ledgers.</li>
+              <li>Separates implementation and review roles.</li>
+              <li>Uses script gates for resume and completion checks.</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -199,7 +209,8 @@
         <h2>Install</h2>
         <pre><code>mkdir -p ~/.codex/skills
 cp -R skills/planner-coordinator ~/.codex/skills/
-cp -R skills/optimization-council ~/.codex/skills/</code></pre>
+cp -R skills/optimization-council ~/.codex/skills/
+cp -R skills/project-task-executor ~/.codex/skills/</code></pre>
         <p>Restart Codex after copying the folders so the skill metadata is loaded.</p>
       </section>
 
@@ -209,7 +220,9 @@ cp -R skills/optimization-council ~/.codex/skills/</code></pre>
 
 Use optimization-council mode to evaluate this product workflow. Run the minimum 3 council rounds.
 
-启动优化议会，针对这个论文工作流做多角色优化，必须启动 subagents。</code></pre>
+启动优化议会，针对这个论文工作流做多角色优化，必须启动 subagents。
+
+Use project-task-executor to plan, dispatch subagents, review, verify, and commit this project goal: ...</code></pre>
       </section>
     </main>
 
