@@ -1,0 +1,6 @@
+interface:
+  display_name: "项目状态执行器"
+  short_description: "长期项目状态层与AGENT账本"
+  default_prompt: "Use $project-task-executor 为这个长期项目建立或恢复 AGENT_* 状态层、任务账本、验证 gate，并在需要时协调 Superpowers/ECC 执行："
+policy:
+  allow_implicit_invocation: false

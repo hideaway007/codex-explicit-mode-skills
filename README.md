@@ -1,10 +1,26 @@
 # Codex Explicit Mode Skills
 
-Two explicit-mode Codex skills for heavier planning and optimization workflows.
+Explicit-mode Codex skills for heavier planning, optimization, and long-running project state workflows.
 
 These skills are intentionally opt-in. They do not replace Superpowers, ECC, or a project's own `AGENTS.md`; they provide named modes you can invoke when a task needs more structure than the default workflow.
 
 ## Skills
+
+### `project-task-executor`
+
+Use when you explicitly need a long-running project status layer with `AGENT_*` ledgers, resumability, ledger gates, plan-work-review coordination, controlled parallel execution, integrated review, and completion evidence.
+
+Best for:
+
+- Long-running project execution that must survive compaction or a new session.
+- Work that needs `AGENT_PRD.md`, `AGENT_TASKS.md`, `AGENT_DECISIONS.md`, `AGENT_REVIEW.md`, and `AGENT_EVENTS.jsonl`.
+- Multi-task batches where implementers, reviewers, worktrees, verification commands, and commit evidence need to be recorded.
+
+Not for:
+
+- Ordinary feature work already covered by Superpowers.
+- Small edits or single-step fixes.
+- Read-only planning when no durable project ledger is needed.
 
 ### `planner-coordinator`
 
@@ -44,6 +60,7 @@ Copy the skill folders into your Codex skills directory:
 
 ```bash
 mkdir -p ~/.codex/skills
+cp -R skills/project-task-executor ~/.codex/skills/
 cp -R skills/planner-coordinator ~/.codex/skills/
 cp -R skills/optimization-council ~/.codex/skills/
 ```
@@ -51,6 +68,10 @@ cp -R skills/optimization-council ~/.codex/skills/
 Restart Codex so the new skill metadata is loaded.
 
 ## Invocation Examples
+
+```text
+Use project-task-executor for this long-running project. Build the AGENT_* ledgers, coordinate the current task wave, and require Evidence Pack before completion.
+```
 
 ```text
 Use planner-coordinator mode to plan this multi-module refactor before implementation.
@@ -68,6 +89,7 @@ Use optimization-council mode to evaluate this product workflow. Run the minimum
 
 - Explicit mode only: these skills should trigger when requested by name or by a clearly matching user request.
 - Proportional process: do not use the Planner for tiny tasks.
+- Durable state: `project-task-executor` uses repo-local ledgers as the recovery source of truth, not chat memory.
 - Real council: `optimization-council` requires subagents unless the user explicitly accepts a simulated fallback.
 - Verification matters: debate and planning do not replace project tests, lint, build, review, or domain-specific gates.
 
